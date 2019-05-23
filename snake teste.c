@@ -132,7 +132,7 @@ void opcao1()
 			setfillstyle(1,1);
 			for(i=0;i<l;i++)
 				bar(X[i]-B/2,Y[i]-B/2,X[i]+B/2,Y[i]+B/2);
-			delay(100);
+			delay(50);
 		}
 		printf("score : %d",l-5); //record
 		while(!GetAsyncKeyState(VK_RETURN));
