@@ -3,29 +3,31 @@
 #include<time.h>
 
 void opcao1();
+void opcao2();
+void opcao3();
 void menu();
 
 
 int main()
 
 {
-	printf("Oi.\n");
-	printf("Aperte enter para continuar...\n");
-	getchar();
-	menu();
+		printf("Oi.\n");
+		printf("Aperte enter para continuar...\n");
+		getchar();
+		menu();
 	
-	return 0;
-}
+		return 0;
+	}
 
-void menu ()
-{
+	void menu ()
+	{
 	int menu1esc;
-	int i,X[100],Y[100],rx,ry,gd,gm,l,A=2,B=16;
+
 	
 	printf("Menu\n\n");
 	printf("1 - Jogo.\n\n");
-	printf("2 - Nada.\n\n");
-	printf("3 - Nada ainda.\n\n");
+	printf("2 - Record\n\n");
+	printf("3 - Creditos\n\n");
 	scanf("%d", &menu1esc);
 	
 	switch (menu1esc)
@@ -36,12 +38,25 @@ void menu ()
 		int i,X[100],Y[100],rx,ry,gd,gm,l,A=2,B=16;
 		break;
 	}
-	
+	case 2:
+		{
+			opcao2();
+			
+			break;
+		}
+		
+	case 3:
+		{
+			opcao3();
+			
+			break;
+		}
 }
 }
-void opcao1()
 
-{
+void opcao1()
+	{
+
 
 	int i,X[100],Y[100],rx,ry,gd,gm,l,A=2,B=16;
 	srand(time(NULL));
@@ -101,7 +116,7 @@ void opcao1()
 				A=0;
 			else if(GetAsyncKeyState(VK_DOWN)&&A!=1)
 				A=3;
-			if(getpixel(X[0],Y[0])==2) //condição caso a comida seja pegd
+			if(getpixel(X[0],Y[0])==2) //condição caso a comida seja pega
 			{
 				rx=B; ry=B;
 				setfillstyle(1,2);
@@ -122,11 +137,21 @@ void opcao1()
 		printf("score : %A",l-5); //record
 		while(!GetAsyncKeyState(VK_RETURN));
 		closegraph();
-		getch();
+		getch();		
 		
 		
 		menu();
-}
-
-
-
+		
+		}
+			void opcao2()
+			{
+			
+			menu();	
+			}
+			
+			void opcao3()
+			
+			{
+				printf ("Feito por: Cintia Vasconcelos\n\n\n");
+			menu();	
+			}
