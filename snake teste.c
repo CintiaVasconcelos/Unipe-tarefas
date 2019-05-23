@@ -3,10 +3,10 @@
 
 int main ()
 {
-	int i,X[100],Y[100],rx,ry,gA,gm,l,A=2,B=16;
+	int i,X[100],Y[100],rx,ry,gd,gm,l,A=2,B=16;
 	srand(time(NULL));
-	detectgraph(&gA,&gm);
-	initgraph(&gA,&gm,NULL);
+	detectgraph(&gd,&gm);
+	initgraph(&gd,&gm,NULL);
 	setfillstyle(1,1);
 	bar(B-B/2,B-B/2,(B/2)+B*(1350/B),B+B/2); //topo
 	bar(B-B/2,(-B/2)+B*(700/B),(B/2)+B*(1350/B),(B/2)+B*(700/B));	//baixo
@@ -61,7 +61,7 @@ int main ()
 				A=0;
 			else if(GetAsyncKeyState(VK_DOWN)&&A!=1)
 				A=3;
-			if(getpixel(X[0],Y[0])==2) //condição caso a comida seja pega
+			if(getpixel(X[0],Y[0])==2) //condição caso a comida seja pegd
 			{
 				rx=B; ry=B;
 				setfillstyle(1,2);
