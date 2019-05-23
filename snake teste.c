@@ -57,7 +57,7 @@ int main()
 void opcao1()
 	{
 
-
+	system ("CLS");
 	int i,X[100],Y[100],rx,ry,gd,gm,l,A=2,B=16;
 	srand(time(NULL));
 	detectgraph(&gd,&gm);
@@ -134,7 +134,7 @@ void opcao1()
 				bar(X[i]-B/2,Y[i]-B/2,X[i]+B/2,Y[i]+B/2);
 			delay(100);
 		}
-		printf("score : %A",l-5); //record
+		printf("score : %d",l-5); //record
 		while(!GetAsyncKeyState(VK_RETURN));
 		closegraph();
 		getch();		
@@ -152,6 +152,7 @@ void opcao1()
 			void opcao3()
 			
 			{
+				system ("CLS");
 				printf ("Feito por: Cintia Vasconcelos\n\n\n");
 			menu();	
 			}
