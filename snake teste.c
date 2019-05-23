@@ -1,8 +1,48 @@
+#include <stdio.h>
 #include<graphics.h>
 #include<time.h>
 
-int main ()
+void opcao1();
+void menu();
+
+
+int main()
+
 {
+	printf("Oi.\n");
+	printf("Aperte enter para continuar...\n");
+	getchar();
+	menu();
+	
+	return 0;
+}
+
+void menu ()
+{
+	int menu1esc;
+	int i,X[100],Y[100],rx,ry,gd,gm,l,A=2,B=16;
+	
+	printf("Menu\n\n");
+	printf("1 - Jogo.\n\n");
+	printf("2 - Nada.\n\n");
+	printf("3 - Nada ainda.\n\n");
+	scanf("%d", &menu1esc);
+	
+	switch (menu1esc)
+	{
+	case 1:
+	{
+		opcao1();
+		int i,X[100],Y[100],rx,ry,gd,gm,l,A=2,B=16;
+		break;
+	}
+	
+}
+}
+void opcao1()
+
+{
+
 	int i,X[100],Y[100],rx,ry,gd,gm,l,A=2,B=16;
 	srand(time(NULL));
 	detectgraph(&gd,&gm);
@@ -83,5 +123,10 @@ int main ()
 		while(!GetAsyncKeyState(VK_RETURN));
 		closegraph();
 		getch();
-		return 0;
+		
+		
+		menu();
 }
+
+
+
