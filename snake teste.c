@@ -13,11 +13,9 @@ void menu();
 int main()
 
 {
-	
-		menu();
-	
-		return 0;
-	}
+	menu();
+	return 0;
+		}
 
 	void menu ()
 	{
