@@ -13,9 +13,7 @@ void menu();
 int main()
 
 {
-		printf("Oi.\n");
-		printf("Aperte enter para continuar...\n");
-		getchar();
+	
 		menu();
 	
 		return 0;
@@ -347,4 +345,3 @@ void opcao5()
 		printf("Ranking");
 			menu();	
 			}
-		
