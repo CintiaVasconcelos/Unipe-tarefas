@@ -72,7 +72,7 @@ void opcao1()
 	{
 
 	system ("CLS");
-	int i,X[100],Y[100],rx,ry,gd,gm,l,A=2,B=16;
+	int i,X[100],Y[100],rx,ry,gd=DETECT,gm,l,A=2,B=16;
 	srand(time(NULL));
 	detectgraph(&gd,&gm);
 	initgraph(&gd,&gm,NULL);
@@ -80,7 +80,7 @@ void opcao1()
 	bar(B-B/2,B-B/2,(B/2)+B*(1350/B),B+B/2); //topo
 	bar(B-B/2,(-B/2)+B*(700/B),(B/2)+B*(1350/B),(B/2)+B*(700/B));	//baixo
 	bar(B-B/2,B-B/2,B+B/2,(B/2)+B*(700/B)); //esquerda
-	bar((-B/2)+B*(1350/B),B-B/2,(B/2)+B*(1350/B),(B/2)+B*(700/B)); //direta
+	bar((-B/2)+B*(1350/B),B-B/2,(B/2)+B*(1350/B),(B/2)+B*(700/B)); //direita
 	X[0]=B*(1350/(2*B)); Y[0]=B*(700/(2*B));
 	bar(X[0]-B/2,Y[0]-B/2,X[0]+B/2,Y[0]+B/2);
 	l=5;
@@ -119,8 +119,11 @@ void opcao1()
 			else if(A==3) 
 				Y[0]=Y[0]+B;
 			//condição término
-			if(getpixel(X[0],Y[0])==1)
-				break;
+			if(getpixel(X[0],Y[0])==1){
+				closegraph();
+				system ("CLS");
+				printf("\n\n\n\n\nscore : %d\n\n\n\n\n",l-5);
+				menu();}
 			//atualizar direção
 			if(GetAsyncKeyState(VK_RIGHT)&&A!=0)
 				A=2;
@@ -204,8 +207,12 @@ void opcao2()
 			else if(A==3)
 				Y[0]=Y[0]+B;
 				//condição término
-				if(getpixel(X[0],Y[0])==1)
-				break;
+				if(getpixel(X[0],Y[0])==1){
+				closegraph();
+				system ("CLS");
+				printf("\n\n\n\n\nscore : %d\n\n\n\n\n",l-5);
+				menu();}
+				
 			//atualizar direção
 			if(GetAsyncKeyState(VK_RIGHT)&&A!=0)
 				A=2;
@@ -292,8 +299,11 @@ void opcao3()
 			else if(A==3)
 				Y[0]=Y[0]+B;
 				//condição término
-				if(getpixel(X[0],Y[0])==1)
-				break;
+				if(getpixel(X[0],Y[0])==1){
+				closegraph();
+				system ("CLS");
+				printf("\n\n\n\n\nscore : %d\n\n\n\n\n",l-5);
+				menu();}
 			//atualizar direção
 			if(GetAsyncKeyState(VK_RIGHT)&&A!=0)
 				A=2;
@@ -333,13 +343,14 @@ void opcao3()
 void opcao4()
 	{
 		system ("CLS");
-		printf ("Feito por: Cintia Vasconcelos\n\n\n");
+		printf ("\n\n\n\nFeito por: Cintia Vasconcelos\n\n\n\n");
 			menu();	
 		}
 	
 void opcao5()
 	{	
 		system ("CLS");
-		printf("Ranking");
+		printf("\n\nRanking\n\n");
+		printf("\n\nVoce eh o melhor :)\n\n\n\n");
 			menu();	
 			}
